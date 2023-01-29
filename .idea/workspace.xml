@@ -77,6 +77,16 @@
           <entry key="Python" value="2" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="txt" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="16" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -317,7 +327,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="数据处理由随机变换改为非随机变换" />
     <MESSAGE value="上传模型训练及评估结果" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传模型训练及评估结果" />
+    <MESSAGE value="重新训练模型，准确率86.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="重新训练模型，准确率86.9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
