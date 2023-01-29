@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b132e2c-6ca6-4f41-8c94-d2a98ff56c44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_0" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_1" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_2" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_3" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_4" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_5" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_6" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_7" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_8" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_9" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoints/checkpoint.pth.tar.epoch_9" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -289,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639394794600</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="重新训练模型，准确率86.9">
+      <created>1674973754061</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674973754061</updated>
+    </task>
+    <task id="LOCAL-00007" summary="重新训练模型，准确率86.9">
+      <created>1674973968781</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674973968781</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
