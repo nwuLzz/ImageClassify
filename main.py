@@ -20,7 +20,7 @@ def parse_arg():
     parser.add_argument('--image_size', help='输入图片的宽与高，B0推荐224', default=224)
     parser.add_argument('--batch_size', help='batchsize数', default=32)
     parser.add_argument('--workers', help='Dataloader的worker数', default=2)
-    parser.add_argument('--epochs', help='epoch数', default=10)
+    parser.add_argument('--epochs', help='epoch数', default=1)
     parser.add_argument('--lr', help='学习率', default=0.001)
     parser.add_argument('--checkpoint_dir', help='模型保存位置', default='./checkpoints')
     parser.add_argument('--save_interval', help='保存间隔，每1个epoch保存一次', default=1)
@@ -76,7 +76,7 @@ def model_eva(model_pth):
     test_dataset = build_data_set(args.image_size, args.test_data)
     test_loader = torch.utils.data.DataLoader(
         test_dataset,
-        batch_size=32,      # 一次预测几张照片
+        batch_size=1,      # 一次预测几张照片
         shuffle=False,
         num_workers=args.workers)
     # 分批预测
@@ -84,15 +84,16 @@ def model_eva(model_pth):
     y_pred = torch.tensor([])   # 初始化所有测试集图片的预测类别
     batch_cnt = 1
     for i, (images, target) in enumerate(test_loader):
-        # print("\n测试集第 {} 批预测情况：".format(batch_cnt))
+        print("\n测试集第 {} 批预测情况：".format(batch_cnt))
+        print(i)
         output = model(images)
         m = nn.Softmax(dim=1)
         output = m(output)      # 利用softmax将预测的每类概率转为0~1之间，所有类的预测概率和为1
         y_pred_batch = output.argmax(dim=1)     # top1预测类别
-        # print("预测结果（全）：", output)
-        # print("top1预测概率：", output.max(dim=1).values)
-        # print("top1预测类别：", y_pred_batch)
-        # print("实际类别：", target)
+        print("预测结果（全）：", output)
+        print("top1预测概率：", output.max(dim=1).values)
+        print("top1预测类别：", y_pred_batch)
+        print("实际类别：", target)
         batch_cnt += 1
 
         y_pred = torch.cat((y_pred, y_pred_batch), dim=0)
@@ -194,6 +195,8 @@ def main(args):
             # 只保存训练好的参数，state_dict存储的是模型可训练的参数，可打印出来查看
             # print('\n训练好的参数示例：')
             # print(model.state_dict()['_fc.bias'])   # 只打印最后一层的bias
+    # 保存最后一个epoch的模型
+    torch.save(model.state_dict(), os.path.join(args.checkpoint_dir, 'checkpoint.pth'))
 
 
 if __name__ == '__main__':
@@ -202,5 +205,6 @@ if __name__ == '__main__':
     main(args)
 
     # 模型评估
-    model_pth = os.path.join(args.checkpoint_dir, 'checkpoint.pth.tar.epoch_9')
+    model_pth = os.path.join(args.checkpoint_dir, 'checkpoint.pth')
+    print("\n-----------------------模型评估-----------------------")
     model_eva(model_pth)
